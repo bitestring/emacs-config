@@ -8,14 +8,15 @@
  '(custom-enabled-themes '(adwaita light-blue))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(lsp-haskell which-key dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode treemacs-tab-bar unicode-fonts haskell-mode fullframe flycheck treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil treemacs projectile magit use-package))
- '(size-indication-mode t))
+   '(rust-mode company lsp-haskell which-key dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode treemacs-tab-bar unicode-fonts haskell-mode fullframe flycheck treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil treemacs projectile magit use-package))
+ '(size-indication-mode t)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight medium :height 143 :width normal)))))
+ '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight normal :height 143 :width normal)))))
 
 
 (require 'package)
