@@ -6,6 +6,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes '(adwaita light-blue))
+ '(display-time-mode t)
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    '(rust-mode company lsp-haskell which-key dap-mode lsp-treemacs lsp-ivy helm-lsp lsp-ui lsp-mode treemacs-tab-bar unicode-fonts haskell-mode fullframe flycheck treemacs-tab-bar treemacs-persp treemacs-magit treemacs-icons-dired treemacs-projectile treemacs-evil treemacs projectile magit use-package))
