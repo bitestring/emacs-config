@@ -165,6 +165,8 @@
 	 (rust-mode . lsp)
          (haskell-mode . lsp)
 	 (haskell-literate-mode . lsp)
+	 (c-mode . lsp)
+	 (c++-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
@@ -177,9 +179,23 @@
 ;; if you are ivy user
 (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
-
 ;; optionally if you want to use debugger
-(use-package dap-mode)
+
+;; debugger configuration
+(require 'dap-cpptools)
+(require 'dap-gdb-lldb)
+
+(use-package dap-mode
+  :init
+  :config
+    (dap-register-debug-template "Rust::GDB Run Configuration"
+                             (list :type "gdb"
+                                   :request "launch"
+                                   :name "GDB::Run"
+                           :gdbpath "rust-gdb"
+                                   :target nil
+                                   :cwd nil)))
+
 ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
 
 ;; optional if you want which-key integration
