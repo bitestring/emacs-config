@@ -1,3 +1,10 @@
+;;; init.el --- Initialization file for emacs
+
+;;; Commentary:
+;; Emacs Startup File - Configures UI, VCS, LSPs, Debuggers etc.
+
+;;; Code:
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -180,3 +187,7 @@
     :config
     (which-key-mode))
 
+
+(provide 'init)
+
+;;; init.el ends here
