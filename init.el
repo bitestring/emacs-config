@@ -26,6 +26,8 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight medium :height 151 :width normal)))))
 
+;; Org mode customization
+(setq org-replace-disputed-keys t)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
