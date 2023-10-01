@@ -183,7 +183,8 @@
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
-  :config)
+  :config
+         (define-key lsp-mode-map (kbd "C-c l") lsp-command-map))
 
 ;; optionally
 (use-package lsp-ui :commands lsp-ui-mode)
