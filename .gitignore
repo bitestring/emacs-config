@@ -1,9 +1,4 @@
-.cache
 auto-save-list
-eln-cache
 transient
 var
 elpa
-.lsp-session*
-projectile*
-projects
