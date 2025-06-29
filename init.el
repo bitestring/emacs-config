@@ -11,7 +11,7 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes '(tango-dark))
+ '(custom-enabled-themes '(tango))
  '(display-time-mode t)
  '(global-display-line-numbers-mode t)
  '(package-selected-packages nil)
