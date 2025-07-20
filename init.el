@@ -10,13 +10,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(context-menu-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes '(tango))
  '(display-time-mode t)
  '(global-display-line-numbers-mode t)
  '(package-selected-packages nil)
  '(size-indication-mode t)
- '(tool-bar-mode nil))
+ '(tab-bar-mode t)
+ '(global-tab-line-mode t))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -50,7 +51,18 @@
    :config
     (unicode-fonts-setup))
 
+;; auto dark mode based on system theme
+;; https://github.com/LionyxML/auto-dark-emacs
+(use-package auto-dark
+  :ensure t
+  :custom
+  (auto-dark-themes '((modus-vivendi) (modus-operandi)))
+  :config 
+  (auto-dark-mode t)
+  :init (auto-dark-mode))
+
 ;; source control
+;; https://magit.vc/
 (use-package magit)
 
 ;; configure magit to use full buffer instead of a popup
@@ -61,6 +73,13 @@
 (use-package which-key
     :config
     (which-key-mode))
+
+;; automatically update packages
+;; https://github.com/rranelli/auto-package-update.el
+;; https://weavermarquez.github.io/emacs-from-scratch/keeping-your-packages-up-to-date/
+(use-package auto-package-update
+  :config
+  (auto-package-update-maybe))
 
 (provide 'init)
 
